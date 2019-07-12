@@ -2,12 +2,12 @@ from pathlib import Path
 import argparse
 import sys
 
-# 4. 定义--name所对应的函数
+# 4. Define the function for --name
 def name_parameter(start, args):
     for f in start.rglob(args.name):  
         print(f)
 
-# 5. 定义--type所对应的函数
+# 5. Define the function for --type
 def type_parameter(start, args):
     if args.type not in ['d', 'f']:
         print(f"Unknown type: {args.type}")
@@ -20,7 +20,7 @@ def type_parameter(start, args):
         else:
             pass
     
-# 3. 基于用户的输入（--name及--type参数的使用），定义搜索逻辑
+# 3. Define search logic based on the user's input 
 def find_files(args):
     start_path = Path(args.start[0])      
     
@@ -32,7 +32,7 @@ def find_files(args):
         print("You need either --name or --type")
         sys.exit(1)
 
-# 1. 设置argparse如何接收与解析命令行字符，并返回解析后的实例化对象（即之前常用的args对象）
+# 1. Define how argparse receives and parses command line characters, then return the parsed instantiated object
 def parse_args():
     parser = argparse.ArgumentParser()
 
@@ -42,5 +42,5 @@ def parse_args():
 
     return parser.parse_args()
 
-# 2. 设置本代码的起始运行点
+# 2. Define the startpoint of the code
 find_files(parse_args())

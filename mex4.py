@@ -11,7 +11,5 @@ args = parser.parse_args()
 print(args)
 print(vars(args))
 
-# argparse — 命令行选项、参数和子命令的解析器: https://www.cnblogs.com/xiaofeiIDO/p/6154953.html
 # Argparse Tutorial: https://docs.python.org/3/howto/argparse.html#id1
 # argparse — Parser for command-line options, arguments and sub-commands: https://docs.python.org/3/library/argparse.html
-# Zed's Answer: https://github.com/zedshaw/learn-more-python-the-hard-way-solutions/blob/master/ex04_parseargs/parseargs.py
