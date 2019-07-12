@@ -1,15 +1,15 @@
-# Below code accomplishs the replace functionality via call mex9_2_tools. For example:
+# Below code accomplishs the replace functionality via call mex09_2_tools. For example:
 # python sed.py 's/test/SAMPLE/g' file_name
 # python sed.py 'r in_file_name' file_name
 
 import sys
-import mex9_2_tools
+import mex09_2_tools
 
 script = sys.argv[1]    
 files = sys.argv[2:]    
                         
 
-mex9_2_tools.sed(script, files)
+mex09_2_tools.sed(script, files)
 
 
 # sys.argv
